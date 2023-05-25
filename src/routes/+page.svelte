@@ -6,7 +6,7 @@
 <main>
   <Navbar/>
   <div class="content">
-    <div class="main">Hello World!</div>
+    <div class="main"><h1>Hello World!</h1></div>
     <div class="coba"></div>
   </div>
 </main>
@@ -17,6 +17,8 @@
     height: 100vh;
     border-bottom-right-radius: 20%;
     border-bottom-left-radius: 20%;
+    display: flex;
+    justify-content: center;
   }
   .coba {
     height: 100px;
