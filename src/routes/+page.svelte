@@ -2,6 +2,8 @@
     import "../app.css"
     import Navbar from "../components/Navbar.svelte";
     import avatar from "$lib/assets/Ellipse.png"
+    import jadwal from "$lib/assets/jadwal.png"
+    import mail from "$lib/assets/mail.png"
 </script>
 
 <main>
@@ -11,30 +13,39 @@
       <div style="display: flex; flex-direction: column; flex:1.5; align-self: start; height: 100%; padding-top: 5%; box-sizing: border-box;">
         <span style="font-size: 39px; font-weight: bold;"><span style="color: #F48C06;">"Master the web from</span><br> <span style="color: #2F327D;">Anywhere</span>, <span style="color: #65DAFF;">Anytime"</span></span>
         <p>Pelajari pengembangan web dengan cara yang inovatif dan interaktif melalui EduWeb, platform e-learning sejati.</p>
-        <div><button class="ayo-gabung">Ayo Gabung</button> <button>Lihat Cara Kerjanya</button></div>
+        <div>
+          <button class="ayo-gabung">Ayo Gabung</button>
+          <button class="lihat-cara-kerja">Lihat Cara Kerjanya</button>
+        </div>
       </div>
       <div class="coba" style="flex: 1; height: 100%; padding-top: 14%; box-sizing: border-box; display: flex; justify-content: center;">
-        <div style="background-color: white; border-radius: 10px; height: 350px;display: flex;flex-direction: column; align-items: center; width: 90%; padding-top: 5%;">
-          <div style="display: flex; gap: 7px;">
-            <img src="{avatar}" alt="avatar" height="40" width="40"/>
-            <div style="display: flex; flex-direction: column;">
-              <span style="font-weight: bold;">User Experience Class</span>
-              <span style="font-size: small;">Today at 12.00 PM</span>
+        <div style="background-color: white; border-radius: 10px; height: 350px;display: flex;flex-direction: column; align-items: center; width: 90%; padding-top: 5%; gap: 50px;">
+          <div style="display: flex;flex-direction: column; align-items: center;">
+            <div style="display: flex; gap: 7px;">
+              <img src="{avatar}" alt="avatar" height="40" width="40"/>
+              <div style="display: flex; flex-direction: column;">
+                <span style="font-weight: bold;">User Experience Class</span>
+                <span style="font-size: small;">Today at 12.00 PM</span>
+              </div>
             </div>
+            <button class="join-now">Join Now</button>
           </div>
-          <button class="join-now">Join Now</button>
-          <div>
-            <div class="jadwal-logo"></div>
-            <span>250k</span>
-            <p>Assisted Student</p>
+          <div style="display: flex; gap: 7px;">
+            <img src="{jadwal}" alt="" srcset="">
+            <div style="display: flex; flex-direction: column;">
+              <span style="font-weight: bold;">250k</span>
+              <span style="font-size: small;">Assisted Student</span>
+            </div>
           </div>
         </div>
       </div>
-      <div class="coba2" style="flex: 1; background-color: violet;">
-        <div class="card" style="background-color: white;">
-          <div class="mail-logo"></div>
-          <span>Congratulation</span>
-          <p>Your admission completed</p>
+      <div class="coba2" style="flex: 1; display: flex; justify-content: center;">
+        <div class="card" style="background-color: white; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 20px; border-radius: 10px; gap: 7px">
+          <img src="{mail}" alt="mail" height="40" width="40"/>
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-weight: bold;">Congratulation</span>
+            <span style="font-size: small;">Your admission completed</span>
+          </div>
         </div>
       </div>
     </div>
@@ -58,20 +69,25 @@
   }
   .ayo-gabung {
     background-color: #F48C06;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    width: 100px;
+    padding: 10px;
     text-align: center;
+    border: 0;
     border-radius: 20px;
     color: white;
   }
   .join-now {
-    background-color: red;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    width: 100px;
+    background-color: #D8587E;
+    padding: 10px;
     text-align: center;
+    border: 0;
     border-radius: 20px;
     color: white;
+  }
+  .lihat-cara-kerja {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border: 0;
+    border-radius: 20px;
   }
 </style>
