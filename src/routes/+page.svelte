@@ -1,5 +1,6 @@
 <script>
 	import '../app.css';
+  import '@fontsource/poppins';
 	import Navbar from '../components/Navbar.svelte';
 	import airbnb from '$lib/assets/airbnb.svg';
 	import amazon from '$lib/assets/amazon.svg';
