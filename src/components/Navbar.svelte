@@ -1,4 +1,32 @@
 <script>
+  import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte'
+</script>
+
+<Navbar let:hidden let:toggle>
+  <NavBrand href="/">
+    <img
+      src="/images/flowbite-svelte-icon-logo.svg"
+      class="mr-3 h-6 sm:h-9"
+      alt="Flowbite Logo"
+    />
+    <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+      EduWeb
+    </span>
+  </NavBrand>
+  <NavHamburger on:click={toggle} />
+  <NavUl {hidden}>
+    <NavLi href="/" active={true}>Home</NavLi>
+    <NavLi href="/about">Courses</NavLi>
+    <NavLi href="/services">Blog</NavLi>
+    <NavLi href="/pricing">About Us</NavLi>
+    <NavLi href="/login">Login</NavLi>
+    <NavLi href="/signup">Sign Up</NavLi>
+  </NavUl>
+</Navbar>
+
+
+
+<!-- <script>
 
 </script>
 
@@ -63,4 +91,4 @@
     text-align: center;
     border-radius: 20px;
   }
-</style>
+</style> -->

@@ -1,93 +1,106 @@
 <script>
-    import "../app.css"
-    import Navbar from "../components/Navbar.svelte";
-    import avatar from "$lib/assets/Ellipse.png"
-    import jadwal from "$lib/assets/jadwal.png"
-    import mail from "$lib/assets/mail.png"
+	import '../app.css';
+	import Navbar from '../components/Navbar.svelte';
+	import airbnb from '$lib/assets/airbnb.svg';
+	import amazon from '$lib/assets/amazon.svg';
+	import facebook from '$lib/assets/facebook.svg';
+	import google from '$lib/assets/google.svg';
+	import grab from '$lib/assets/grab.svg';
+	import netflix from '$lib/assets/netflix.svg';
+
+	import {
+		Alert,
+		Card,
+		MenuButton,
+		Dropdown,
+		DropdownItem,
+		Avatar,
+		Button,
+		Listgroup
+	} from 'flowbite-svelte';
+
+  let listBrand = [
+    {src: airbnb, alt:"airbnb"},
+    {src: amazon, alt:"amazon"},
+    {src: facebook, alt:"facebook"},
+    {src: google, alt:"google"},
+    {src: grab, alt:"grab"},
+    {src: netflix, alt:"netflix"}
+  ]
 </script>
 
-<main>
-  <Navbar/>
-  <div class="content">
-    <div class="main">
-      <div style="display: flex; flex-direction: column; flex:1.5; align-self: start; height: 100%; padding-top: 5%; box-sizing: border-box;">
-        <span style="font-size: 39px; font-weight: bold;"><span style="color: #F48C06;">"Master the web from</span><br> <span style="color: #2F327D;">Anywhere</span>, <span style="color: #65DAFF;">Anytime"</span></span>
-        <p>Pelajari pengembangan web dengan cara yang inovatif dan interaktif melalui EduWeb, platform e-learning sejati.</p>
-        <div>
-          <button class="ayo-gabung">Ayo Gabung</button>
-          <button class="lihat-cara-kerja">Lihat Cara Kerjanya</button>
-        </div>
-      </div>
-      <div class="coba" style="flex: 1; height: 100%; padding-top: 14%; box-sizing: border-box; display: flex; justify-content: center;">
-        <div style="background-color: white; border-radius: 10px; height: 350px;display: flex;flex-direction: column; align-items: center; width: 90%; padding-top: 5%; gap: 50px;">
-          <div style="display: flex;flex-direction: column; align-items: center;">
-            <div style="display: flex; gap: 7px;">
-              <img src="{avatar}" alt="avatar" height="40" width="40"/>
-              <div style="display: flex; flex-direction: column;">
-                <span style="font-weight: bold;">User Experience Class</span>
-                <span style="font-size: small;">Today at 12.00 PM</span>
-              </div>
-            </div>
-            <button class="join-now">Join Now</button>
-          </div>
-          <div style="display: flex; gap: 7px;">
-            <img src="{jadwal}" alt="" srcset="">
-            <div style="display: flex; flex-direction: column;">
-              <span style="font-weight: bold;">250k</span>
-              <span style="font-size: small;">Assisted Student</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="coba2" style="flex: 1; display: flex; justify-content: center;">
-        <div class="card" style="background-color: white; display: flex; align-items: center; justify-content: center; width: fit-content; padding: 20px; border-radius: 10px; gap: 7px">
-          <img src="{mail}" alt="mail" height="40" width="40"/>
-          <div style="display: flex; flex-direction: column;">
-            <span style="font-weight: bold;">Congratulation</span>
-            <span style="font-size: small;">Your admission completed</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
+<main class="flex flex-col">
+	<Navbar />
+  <div class="flex flex-col">
+	<div class="flex">
+		<div class="flex m-auto gap-4">
+			<Card padding="sm" class="h-fit border-none shadow-none">
+				<div class="flex flex-col items-center pb-4">
+					<h5 class="mb-1 text-5xl font-medium text-gray-900 dark:text-white">
+						"Master the web from Anywhere, Anytime"
+					</h5>
+					<span class="text-sm text-gray-500 dark:text-gray-400"
+						>Pelajari pengembangan web dengan cara yang inovatif dan interaktif melalui EduWeb,
+						platform e-learning sejati.
+					</span>
+					<div class="flex mt-4 space-x-3 lg:mt-6">
+						<Button>Ayo Gabung</Button>
+						<Button color="light" class="dark:text-white">Lihat Cara Kerjanya</Button>
+					</div>
+				</div>
+			</Card>
 
-<style>
-  .content {
-    display: flex;
-    justify-content: center;
-    background-color: #FFF2E1;
-  }
-  .main {
-    height: 100vh;
-    border-bottom-right-radius: 20%;
-    border-bottom-left-radius: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 85%;
-  }
-  .ayo-gabung {
-    background-color: #F48C06;
-    padding: 10px;
-    text-align: center;
-    border: 0;
-    border-radius: 20px;
-    color: white;
-  }
-  .join-now {
-    background-color: #D8587E;
-    padding: 10px;
-    text-align: center;
-    border: 0;
-    border-radius: 20px;
-    color: white;
-  }
-  .lihat-cara-kerja {
-    background-color: white;
-    padding: 10px;
-    text-align: center;
-    border: 0;
-    border-radius: 20px;
-  }
-</style>
+			<Card class="h-fit self-end">
+        <div class="flex flex-col gap-3">
+					<div class="flex items-center space-x-4">
+						<Avatar src="" alt="avatar" class="flex-shrink-0" />
+						<div class="flex-1 min-w-0">
+							<p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+								User Experience Class
+							</p>
+							<p class="text-sm text-gray-500 truncate dark:text-gray-400">
+								Today at 12.00 PM
+							</p>
+						</div>
+          </div>
+          <Button class="w-fit" color="red">Join Now</Button>
+        </div>
+			</Card>
+
+			<Card class="h-fit self-center">
+				<a class="flex flex-row" href="/">
+					<svg width="50px" height="50px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
+						><g fill="none" fill-rule="evenodd"
+							><path fill="#ffda3e" d="M56 402.667h400V109.333H56z" /><path
+								fill="#fc0"
+								d="M256 182.667l-200 220h400z"
+							/><path
+								d="M456 109.333L276.848 284.116c-11.675 11.4-30.02 11.4-41.696 0L56 109.333h400z"
+								fill="#f33"
+							/></g
+						></svg
+					>
+					<div>
+						<h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+							Congratulation
+						</h5>
+						<p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+							Your admission completed
+						</p>
+					</div>
+				</a>
+			</Card>
+	</div>
+</div>
+<div class="flex flex-col justify-center">
+  <span class="m-auto">Trusted by 5,000+ Companies Worldwide</span>
+  <Listgroup items={listBrand} let:item class="flex">
+    <img src={item.src} alt={item.alt} />
+  </Listgroup>
+</div>
+<div>
+  <h5>All-In-One Cloud Software.</h5>
+  <span>Bergabung dengan EduWeb pasti akan memberikan manfaat bagi siswa yang tertarik dalam bidang pengembangan website.</span>
+</div>
+	</div>
+</main>
