@@ -1,15 +1,15 @@
 <script>
-	import '../app.css';
 	import '@fontsource/poppins';
 	import Navbar from '../components/Navbar.svelte';
+	import Footer from '../components/Footer.svelte';
 	import airbnb from '$lib/assets/airbnb.svg';
 	import amazon from '$lib/assets/amazon.svg';
 	import facebook from '$lib/assets/facebook.svg';
 	import google from '$lib/assets/google.svg';
 	import grab from '$lib/assets/grab.svg';
 	import netflix from '$lib/assets/netflix.svg';
-	import mentor from '$lib/assets/mentor.png'
-	import pelajar from '$lib/assets/pelajar.png'
+	import mentor from '$lib/assets/mentor.png';
+	import pelajar from '$lib/assets/pelajar.png';
 
 	import {
 		Alert,
@@ -20,7 +20,7 @@
 		Avatar,
 		Button,
 		Listgroup,
-		Heading
+		Heading,
 	} from 'flowbite-svelte';
 
 	let listBrand = [
@@ -33,9 +33,9 @@
 	];
 </script>
 
-<main class="flex flex-col">
+<main class="flex flex-col items-center">
 	<Navbar />
-	<div class="flex m-auto container">
+	<div class="flex container justify-center">
 		<div class="flex flex-col">
 			<div class="flex">
 				<div class="flex m-auto gap-4 flex-col sm:flex-row items-center">
@@ -99,8 +99,8 @@
 					</Card>
 				</div>
 			</div>
-			<div class="flex flex-col justify-center mt-56 gap-2">
-				<span class="m-auto">Trusted by 5,000+ Companies Worldwide</span>
+			<div class="flex flex-col mt-56 gap-2 items-center text-gray-900 dark:text-white">
+				<span>Trusted by 5,000+ Companies Worldwide</span>
 				<Listgroup items={listBrand} let:item class="flex">
 					<img src={item.src} alt={item.alt} />
 				</Listgroup>
@@ -169,19 +169,49 @@
 				</div>
 				<div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-0">
 					<Card class="w-[336px] h-56 sm:w-1/2 p-0 border-none shadow-none">
-						<div class="w-full h-full bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center" style="background-image: url({mentor}); ">
+						<div
+							class="w-full h-full bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center"
+							style="background-image: url({mentor}); "
+						>
 							<span class="text-white">Mentor</span>
 							<Button color="none" class="border-2 text-white">Mulai</Button>
 						</div>
 					</Card>
 					<Card class="w-[336px] h-56 sm:w-1/2 p-0 border-none shadow-none">
-						<div class="w-full h-full bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center" style="background-image: url({pelajar});">
+						<div
+							class="w-full h-full bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center"
+							style="background-image: url({pelajar});"
+						>
 							<span class="text-white">Pelajar</span>
 							<Button color="none" class="border-2 bg-sky-400 text-white">Masukan Code</Button>
 						</div>
 					</Card>
 				</div>
 			</div>
+			<div class="flex justify-center w-full mt-44">
+				<Card size="xl">
+					<div class="flex flex-col items-center sm:flex-row">
+						<div
+							class="sm:order-2 w-full sm:w-[50%] h-60 bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center"
+							style="background-image: url({pelajar});"
+						>
+							<Button color="none" class="border-2 bg-sky-400 text-white">Play</Button>
+						</div>
+						<div class="sm:order-1 sm:w-full">
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Dimanapun kamu berada, Komunitas eduweb selalu ada!
+							</h5>
+							<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
+								EduWeb menciptakan komunitas pembelajaran di mana siswa dapat berinteraksi dengan
+								sesama pembelajar, dan kolaborasi dengan orang-orang yang memiliki minat yang sama.
+								Komunitas ini dapat memperkaya pengalaman belajar siswa dan membantu mereka
+								membangun jaringan profesional.
+							</p>
+						</div>
+					</div>
+				</Card>
+			</div>
 		</div>
 	</div>
+	<Footer />
 </main>
