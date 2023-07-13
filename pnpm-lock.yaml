@@ -11,6 +11,9 @@ dependencies:
   '@popperjs/core':
     specifier: ^2.11.8
     version: 2.11.8
+  '@types/gtag.js':
+    specifier: ^0.0.12
+    version: 0.0.12
   flowbite:
     specifier: ^1.7.0
     version: 1.7.0
@@ -500,6 +503,10 @@ packages:
   /@types/cookie@0.5.1:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
     dev: true
+
+  /@types/gtag.js@0.0.12:
+    resolution: {integrity: sha512-YQV9bUsemkzG81Ea295/nF/5GijnD2Af7QhEofh7xu+kvCN6RdodgNwwGWXB5GMI3NoyvQo0odNctoH/qLMIpg==}
+    dev: false
 
   /@types/node@20.2.3:
     resolution: {integrity: sha512-pg9d0yC4rVNWQzX8U7xb4olIOFuuVL9za3bzMT2pu2SU0SNEi66i2qrvhE2qt0HvkhuCaWJu7pLNOt/Pj8BIrw==}

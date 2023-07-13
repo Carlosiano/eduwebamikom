@@ -38,7 +38,7 @@
 	<div class="flex m-auto container">
 		<div class="flex flex-col">
 			<div class="flex">
-				<div class="flex m-auto gap-4">
+				<div class="flex m-auto gap-4 flex-col sm:flex-row items-center">
 					<Card padding="sm" class="h-fit border-none shadow-none">
 						<div class="flex flex-col items-center pb-4">
 							<h5 class="mb-1 text-5xl font-medium text-gray-900 dark:text-white">
@@ -55,7 +55,7 @@
 						</div>
 					</Card>
 
-					<Card class="h-fit self-end">
+					<Card class="h-fit sm:self-end w-fit">
 						<div class="flex flex-col gap-3">
 							<div class="flex items-center space-x-4">
 								<Avatar src="" alt="avatar" class="flex-shrink-0" />
@@ -70,7 +70,7 @@
 						</div>
 					</Card>
 
-					<Card class="h-fit self-center">
+					<Card class="h-fit sm:self-center">
 						<a class="flex flex-row" href="/">
 							<svg
 								width="50px"
@@ -105,7 +105,7 @@
 					<img src={item.src} alt={item.alt} />
 				</Listgroup>
 			</div>
-			<div class="flex flex-col mt-44 gap-4">
+			<div class="flex flex-col mt-44 gap-4 items-center">
 				<Card class="m-auto shadow-none border-none" size="lg">
 					<div class="text-center">
 						<Heading tag="h4">All-In-One Cloud Software.</Heading>
@@ -115,7 +115,7 @@
 						>
 					</div>
 				</Card>
-				<div class="flex gap-5 justify-center">
+				<div class="flex gap-5 justify-center flex-col sm:flex-row">
 					<Card padding="sm">
 						<div class="flex flex-col items-center pb-4">
 							<Avatar size="lg" src="/images/profile-picture-3.webp" />
@@ -167,9 +167,18 @@
 						</div>
 					</Card>
 				</div>
-				<div>
-					<Card>
-						<div class="bg-local bg-[url('/mentor.png')]"></div>
+				<div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-0">
+					<Card class="w-[336px] h-56 sm:w-1/2 p-0 border-none shadow-none">
+						<div class="w-full h-full bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center" style="background-image: url({mentor}); ">
+							<span class="text-white">Mentor</span>
+							<Button color="none" class="border-2 text-white">Mulai</Button>
+						</div>
+					</Card>
+					<Card class="w-[336px] h-56 sm:w-1/2 p-0 border-none shadow-none">
+						<div class="w-full h-full bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center" style="background-image: url({pelajar});">
+							<span class="text-white">Pelajar</span>
+							<Button color="none" class="border-2 bg-sky-400 text-white">Masukan Code</Button>
+						</div>
 					</Card>
 				</div>
 			</div>
