@@ -15,6 +15,15 @@
 	import fiturkamiiconlist2 from '$lib/assets/fiturkamiiconlist2.png';
 	import fiturkamiiconlist3 from '$lib/assets/fiturkamiiconlist3.png';
 	import toolsformentor from '$lib/assets/toolsformentor.png';
+	import venice from '$lib/assets/venice.png';
+	import gradebook from '$lib/assets/gradebook.png';
+	import discussions from '$lib/assets/discussions.png';
+	import dimanapun from '$lib/assets/dimanapun.png';
+	import freedom from '$lib/assets/freedom.png';
+	import flexibilitas from '$lib/assets/flexibilitas.png';
+	import bahankursus from '$lib/assets/bahankursus.png';
+	import cloudstorage from '$lib/assets/cloudstorage.png';
+	import glassman from '$lib/assets/glassman.png';
 
 	import {
 		Alert,
@@ -25,10 +34,12 @@
 		Avatar,
 		Button,
 		Listgroup,
-		Heading
+		Heading,
+		Rating,
+		Badge
 	} from 'flowbite-svelte';
 
-	import { VideoSolid, AddressCardSolid, PlayOutline } from 'flowbite-svelte-icons';
+	import { VideoSolid, AddressCardSolid, PlaySolid } from 'flowbite-svelte-icons';
 
 	let fiturKamiIcons = [
 		{ icon: fiturkamiiconlist1, name: 'Ruang mentor yang unik dan fleksibel.' },
@@ -63,7 +74,9 @@
 							</span>
 							<div class="flex mt-4 space-x-3 lg:mt-6">
 								<Button>Ayo Gabung</Button>
-								<Button color="light" class="dark:text-white">Lihat Cara Kerjanya</Button>
+								<Button color="light" class="dark:text-white"
+									><PlaySolid class="text-blue-500" /> Lihat Cara Kerjanya</Button
+								>
 							</div>
 						</div>
 					</Card>
@@ -136,7 +149,7 @@
 				<div class="flex gap-5 justify-center flex-col sm:flex-row">
 					<Card padding="sm">
 						<div class="flex flex-col items-center pb-4">
-							<Avatar size="lg" src="/images/profile-picture-3.webp" />
+							<img src={freedom} alt="" class="w-36" />
 							<h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Freedom</h5>
 							<span class="text-sm text-gray-500 dark:text-gray-400"
 								>EduWeb menawarkan beragam kursus yang dapat dipilih sesuai dengan tingkat keahlian
@@ -146,7 +159,7 @@
 					</Card>
 					<Card padding="sm">
 						<div class="flex flex-col items-center pb-4">
-							<Avatar size="lg" src="/images/profile-picture-3.webp" />
+							<img src={flexibilitas} alt="" class="w-36" />
 							<h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">
 								Fleksibilitas Pembelajaran
 							</h5>
@@ -158,7 +171,7 @@
 					</Card>
 					<Card padding="sm">
 						<div class="flex flex-col items-center pb-4">
-							<Avatar size="lg" src="/images/profile-picture-3.webp" />
+							<img src={bahankursus} alt="" class="w-36" />
 							<h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">
 								Bahan Kursus Online
 							</h5>
@@ -201,7 +214,7 @@
 							style="background-image: url({pelajar});"
 						>
 							<span class="text-white">Pelajar</span>
-							<Button color="none" class="border-2 bg-sky-400 text-white">Masukan Code</Button>
+							<Button color="none" class="border-2 bg-sky-500 text-white">Masukan Code</Button>
 						</div>
 					</Card>
 				</div>
@@ -211,10 +224,10 @@
 					<div class="flex flex-col items-center sm:flex-row">
 						<div
 							class="sm:order-2 w-full sm:w-[50%] h-60 bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center"
-							style="background-image: url({pelajar});"
+							style="background-image: url({dimanapun});"
 						>
-							<Button pill={true} outline={true} class="!p-2" color="blue" size="lg"
-								><PlayOutline /></Button
+							<Button pill={true} outline={false} class="!p-2" color="light" size="lg"
+								><PlaySolid class="text-blue-500" /></Button
 							>
 						</div>
 						<div class="sm:order-1 sm:w-full">
@@ -232,7 +245,7 @@
 					</div>
 				</Card>
 			</div>
-			<div class="flex flex-col w-full mt-44">
+			<div class="flex flex-col items-center w-full mt-44">
 				<Card class="m-auto shadow-none border-none" size="lg">
 					<div class="flex flex-col items-center">
 						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -243,7 +256,7 @@
 						</p>
 					</div>
 				</Card>
-				<Card size="xl" class="flex flex-col items-center shadow-none border-none sm:flex-row">
+				<Card size="xl" class="flex flex-col sm:items-start shadow-none border-none sm:flex-row">
 					<img src={fiturkami} alt="" class="sm:w-1/2" />
 					<div class="flex flex-col items-center">
 						<h5
@@ -257,9 +270,9 @@
 						</Listgroup>
 					</div>
 				</Card>
-				<Card class="shadow-none border-none">
-					<img src={toolsformentor} alt="" />
-					<div>
+				<Card size="xl" class="shadow-none border-none flex flex-col sm:items-center sm:flex-row">
+					<img src={toolsformentor} alt="" class="sm:w-1/3 sm:order-2" />
+					<div class="sm:order-1">
 						<h5
 							class="mb-2 text-2xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
 						>
@@ -271,6 +284,110 @@
 							untuk diselesaikan dan diserahkan oleh siswa.
 						</p>
 					</div>
+				</Card>
+				<Card size="xl" class="shadow-none border-none flex flex-col sm:items-start sm:flex-row">
+					<img src={venice} alt="" class="sm:w-1/2" />
+					<div class="sm:mt-6">
+						<h5
+							class="mb-2 text-2xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
+						>
+							Assessments, Quizzes, Tests
+						</h5>
+						<p>
+							Easily launch live assignments, quizzes, and tests. Student results are automatically
+							entered in the online gradebook.
+						</p>
+					</div>
+				</Card>
+				<Card size="xl" class="shadow-none border-none flex flex-col sm:items-start sm:flex-row">
+					<img src={gradebook} alt="" class="sm:w-1/2 sm:order-2" />
+					<div class="sm:mt-6 sm:order-1">
+						<h5
+							class="mb-2 text-2xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
+						>
+							Class Management Tools for Educators
+						</h5>
+						<p>
+							Class provides tools to help run and manage the class such as Class Roster,
+							Attendance, and more. With the Gradebook, teachers can review and grade tests and
+							quizzes in real-time.
+						</p>
+					</div>
+				</Card>
+				<Card size="xl" class="shadow-none border-none flex flex-col sm:items-start sm:flex-row">
+					<img src={discussions} alt="" class="sm:w-1/2" />
+					<div class="">
+						<h5
+							class="mb-2 text-2xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
+						>
+							One-on-One Discussions
+						</h5>
+						<p>
+							Teachers and teacher assistants can talk with students privately without leaving the
+							Zoom environment.
+						</p>
+					</div>
+				</Card>
+				<Button class="w-fit">See more features</Button>
+			</div>
+
+			<div class="flex flex-col items-center w-full">
+				<Card
+					size="xl"
+					class="sm:gap-4 shadow-none border-none flex flex-col sm:items-start sm:flex-row"
+				>
+					<img src={cloudstorage} alt="" class="sm:w-1/3" />
+					<div class="sm:mt-6">
+						<p>-------- INTEGRATIONS</p>
+						<h5
+							class="mb-2 text-2xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
+						>
+							200+ educational tools and platform integrations
+						</h5>
+						<p>
+							Schoology has every tool your classroom needs and comes pre-integrated with more than
+							200+ tools, student information systems (SIS), and education platforms.
+						</p>
+						<Button>See All Integrations</Button>
+					</div>
+				</Card>
+				<Card size="xl" class="gap-6 shadow-none border-none flex flex-col sm:items-start sm:flex-row">
+					<div class="sm:mt-6">
+						<p>-------- TESTIMONIAL</p>
+						<h5
+							class="mb-2 text-2xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
+						>
+							What They Say?
+						</h5>
+						<p>Skilline has got more than 100k positive ratings from our users around the world.</p>
+						<br />
+						<p>Some of the students and teachers were greatly helped by the Skilline.</p>
+						<br />
+						<p>Are you too? Please give your assessment</p>
+						<br />
+						<Button>Write your assessment</Button>
+					</div>
+					<Card padding="md">
+						<div
+							class="rounded-md p-1 bg-slate-500 w-full h-full bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center"
+							style="background-image: url({glassman}); "
+						>
+							<div class="pt-36">
+								<p class="bg-white dark:bg-gray-800 rounded-md p-1">
+									“Terima kasih EduWeb, ini yang saya butuhkan untuk meningkatkan keterampilan
+									pengembangan website saya. Sangat membantu dan menghemat waktu. Mama Saya Bangga
+									sama saya sekarang”.
+								</p>
+							</div>
+						</div>
+						<div class="flex justify-between items-center">
+							<p>Henry Mubarok</p>
+							<div>
+								<Rating rating="5" size="25" class="" />
+								<p>666 reviews at Yelp</p>
+							</div>
+						</div>
+					</Card>
 				</Card>
 			</div>
 		</div>
