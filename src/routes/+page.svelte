@@ -10,6 +10,11 @@
 	import netflix from '$lib/assets/netflix.svg';
 	import mentor from '$lib/assets/mentor.png';
 	import pelajar from '$lib/assets/pelajar.png';
+	import fiturkami from '$lib/assets/fiturkami.png';
+	import fiturkamiiconlist1 from '$lib/assets/fiturkamiiconlist1.png';
+	import fiturkamiiconlist2 from '$lib/assets/fiturkamiiconlist2.png';
+	import fiturkamiiconlist3 from '$lib/assets/fiturkamiiconlist3.png';
+	import toolsformentor from '$lib/assets/toolsformentor.png';
 
 	import {
 		Alert,
@@ -20,8 +25,16 @@
 		Avatar,
 		Button,
 		Listgroup,
-		Heading,
+		Heading
 	} from 'flowbite-svelte';
+
+	import { VideoSolid, AddressCardSolid, PlayOutline } from 'flowbite-svelte-icons';
+
+	let fiturKamiIcons = [
+		{ icon: fiturkamiiconlist1, name: 'Ruang mentor yang unik dan fleksibel.' },
+		{ icon: fiturkamiiconlist2, name: 'Alat-alat yang menarik.' },
+		{ icon: fiturkamiiconlist3, name: 'Mentor dengan mudah memantau pelajar.' }
+	];
 
 	let listBrand = [
 		{ src: airbnb, alt: 'airbnb' },
@@ -54,49 +67,53 @@
 							</div>
 						</div>
 					</Card>
-
-					<Card class="h-fit sm:self-end w-fit">
-						<div class="flex flex-col gap-3">
-							<div class="flex items-center space-x-4">
-								<Avatar src="" alt="avatar" class="flex-shrink-0" />
-								<div class="flex-1 min-w-0">
-									<p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-										User Experience Class
-									</p>
-									<p class="text-sm text-gray-500 truncate dark:text-gray-400">Today at 12.00 PM</p>
+					<div class="flex flex-col gap-3 md:w-96 lg:w-[600px] lg:h-80 lg:flex-row items-center">
+						<Card class="h-fit w-fit md:self-start lg:self-end">
+							<div class="flex flex-col gap-3">
+								<div class="flex items-center space-x-4">
+									<Avatar src="" alt="avatar" class="flex-shrink-0" />
+									<div class="flex-1 min-w-0">
+										<p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+											User Experience Class
+										</p>
+										<p class="text-sm text-gray-500 truncate dark:text-gray-400">
+											Today at 12.00 PM
+										</p>
+									</div>
 								</div>
+								<Button class="w-fit" color="red">Join Now</Button>
 							</div>
-							<Button class="w-fit" color="red">Join Now</Button>
-						</div>
-					</Card>
-
-					<Card class="h-fit sm:self-center">
-						<a class="flex flex-row" href="/">
-							<svg
-								width="50px"
-								height="50px"
-								viewBox="0 0 512 512"
-								xmlns="http://www.w3.org/2000/svg"
-								><g fill="none" fill-rule="evenodd"
-									><path fill="#ffda3e" d="M56 402.667h400V109.333H56z" /><path
-										fill="#fc0"
-										d="M256 182.667l-200 220h400z"
-									/><path
-										d="M456 109.333L276.848 284.116c-11.675 11.4-30.02 11.4-41.696 0L56 109.333h400z"
-										fill="#f33"
-									/></g
-								></svg
-							>
-							<div>
-								<h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-									Congratulation
-								</h5>
-								<p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
-									Your admission completed
-								</p>
-							</div>
-						</a>
-					</Card>
+						</Card>
+						<Card class="h-fit md:self-end lg:self-center">
+							<a class="flex flex-row" href="/">
+								<svg
+									width="50px"
+									height="50px"
+									viewBox="0 0 512 512"
+									xmlns="http://www.w3.org/2000/svg"
+									><g fill="none" fill-rule="evenodd"
+										><path fill="#ffda3e" d="M56 402.667h400V109.333H56z" /><path
+											fill="#fc0"
+											d="M256 182.667l-200 220h400z"
+										/><path
+											d="M456 109.333L276.848 284.116c-11.675 11.4-30.02 11.4-41.696 0L56 109.333h400z"
+											fill="#f33"
+										/></g
+									></svg
+								>
+								<div>
+									<h5
+										class="mb-2 text-sm font-semibold tracking-tight text-gray-900 dark:text-white"
+									>
+										Congratulation
+									</h5>
+									<p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+										Your admission completed
+									</p>
+								</div>
+							</a>
+						</Card>
+					</div>
 				</div>
 			</div>
 			<div class="flex flex-col mt-56 gap-2 items-center text-gray-900 dark:text-white">
@@ -105,6 +122,7 @@
 					<img src={item.src} alt={item.alt} />
 				</Listgroup>
 			</div>
+			<!-- all in one -->
 			<div class="flex flex-col mt-44 gap-4 items-center">
 				<Card class="m-auto shadow-none border-none" size="lg">
 					<div class="text-center">
@@ -167,8 +185,8 @@
 						</div>
 					</Card>
 				</div>
-				<div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-0">
-					<Card class="w-[336px] h-56 sm:w-1/2 p-0 border-none shadow-none">
+				<div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
+					<Card class="w-[336px] h-56 sm:w-1/2 p-0 border-none shadow-none" padding="none">
 						<div
 							class="w-full h-full bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center"
 							style="background-image: url({mentor}); "
@@ -177,7 +195,7 @@
 							<Button color="none" class="border-2 text-white">Mulai</Button>
 						</div>
 					</Card>
-					<Card class="w-[336px] h-56 sm:w-1/2 p-0 border-none shadow-none">
+					<Card class="w-[336px] h-56 sm:w-1/2 p-0 border-none shadow-none" padding="none">
 						<div
 							class="w-full h-full bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center"
 							style="background-image: url({pelajar});"
@@ -195,7 +213,9 @@
 							class="sm:order-2 w-full sm:w-[50%] h-60 bg-local bg-contain bg-no-repeat bg-center flex flex-col justify-center items-center"
 							style="background-image: url({pelajar});"
 						>
-							<Button color="none" class="border-2 bg-sky-400 text-white">Play</Button>
+							<Button pill={true} outline={true} class="!p-2" color="blue" size="lg"
+								><PlayOutline /></Button
+							>
 						</div>
 						<div class="sm:order-1 sm:w-full">
 							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -207,7 +227,49 @@
 								Komunitas ini dapat memperkaya pengalaman belajar siswa dan membantu mereka
 								membangun jaringan profesional.
 							</p>
+							<a href="/" class="inline-flex items-center underline"> learn more </a>
 						</div>
+					</div>
+				</Card>
+			</div>
+			<div class="flex flex-col w-full mt-44">
+				<Card class="m-auto shadow-none border-none" size="lg">
+					<div class="flex flex-col items-center">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Fitur Kami
+						</h5>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
+							Fitur yang sangat luar biasa ini, bisa membuat kegiatan belajar menjadi lebih efisien
+						</p>
+					</div>
+				</Card>
+				<Card size="xl" class="flex flex-col items-center shadow-none border-none sm:flex-row">
+					<img src={fiturkami} alt="" class="sm:w-1/2" />
+					<div class="flex flex-col items-center">
+						<h5
+							class="mb-2 text-2xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
+						>
+							Antarmuka pengguna yang dirancang untuk ruang kelas
+						</h5>
+						<Listgroup active items={fiturKamiIcons} let:item class="w-full p-0">
+							<img src={item.icon} alt="" class="w-14 h-14 sm:w-10 sm:h-10" />
+							{item.name}
+						</Listgroup>
+					</div>
+				</Card>
+				<Card class="shadow-none border-none">
+					<img src={toolsformentor} alt="" />
+					<div>
+						<h5
+							class="mb-2 text-2xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
+						>
+							Tools Untuk mentor dan pelajar
+						</h5>
+						<p>
+							Kelas memiliki seperangkat alat pengajaran dinamis yang dibuat untuk diterapkan dan
+							digunakan selama kelas berlangsung. Pengajar dapat membagikan tugas secara real-time
+							untuk diselesaikan dan diserahkan oleh siswa.
+						</p>
 					</div>
 				</Card>
 			</div>
