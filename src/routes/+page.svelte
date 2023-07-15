@@ -24,6 +24,10 @@
 	import bahankursus from '$lib/assets/bahankursus.png';
 	import cloudstorage from '$lib/assets/cloudstorage.png';
 	import glassman from '$lib/assets/glassman.png';
+	import latestnews1 from '$lib/assets/latestnews1.png';
+	import latestnews2 from '$lib/assets/latestnews2.png';
+	import latestnews3 from '$lib/assets/latestnews3.png';
+	import latestnews4 from '$lib/assets/latestnews4.png';
 
 	import {
 		Alert,
@@ -245,7 +249,7 @@
 					</div>
 				</Card>
 			</div>
-			<div class="flex flex-col items-center w-full mt-44">
+			<div class="flex flex-col items-center w-full mt-44 gap-10">
 				<Card class="m-auto shadow-none border-none" size="lg">
 					<div class="flex flex-col items-center">
 						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -331,7 +335,7 @@
 				<Button class="w-fit">See more features</Button>
 			</div>
 
-			<div class="flex flex-col items-center w-full">
+			<div class="flex flex-col items-center w-full mt-16 gap-10">
 				<Card
 					size="xl"
 					class="sm:gap-4 shadow-none border-none flex flex-col sm:items-start sm:flex-row"
@@ -348,17 +352,27 @@
 							Schoology has every tool your classroom needs and comes pre-integrated with more than
 							200+ tools, student information systems (SIS), and education platforms.
 						</p>
+						<br />
 						<Button>See All Integrations</Button>
 					</div>
 				</Card>
-				<Card size="xl" class="gap-6 shadow-none border-none flex flex-col sm:items-start sm:flex-row">
+				<Card
+					size="xl"
+					class="gap-6 shadow-none border-none flex flex-col sm:items-start sm:flex-row"
+				>
 					<div class="sm:mt-6">
-						<p>-------- TESTIMONIAL</p>
-						<h5
-							class="mb-2 text-2xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
-						>
-							What They Say?
-						</h5>
+						<div class="flex flex-col items-end sm:block">
+							<p
+								class="before:content-[''] after:content-['--------'] sm:before:content-['--------'] sm:after:content-['']"
+							>
+								TESTIMONIAL
+							</p>
+							<h5
+								class="mb-2 text-2xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
+							>
+								What They Say?
+							</h5>
+						</div>
 						<p>Skilline has got more than 100k positive ratings from our users around the world.</p>
 						<br />
 						<p>Some of the students and teachers were greatly helped by the Skilline.</p>
@@ -388,6 +402,60 @@
 							</div>
 						</div>
 					</Card>
+				</Card>
+			</div>
+
+			<!-- Lastest News and Resources -->
+			<div class="mt-36 flex justify-center">
+				<Card
+					size="xl"
+					padding="none"
+					class="shadow-none border-none flex flex-col sm:items-center sm:flex-row"
+				>
+					<div class="flex flex-col justify-center items-center">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							Lastest News and Resources
+						</h5>
+						<p>See the developments that have occurred to Skillines in the world</p>
+						<div class="flex gap-6 flex-col md:flex-row mt-11">
+							<Card img={latestnews1} class="h-fit">
+								<h5 class="mb-2 font-bold text-gray-900 dark:text-white">
+									Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution
+								</h5>
+								<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
+									Class, launched less than a year ago by Blackboard co-founder Michael Chasen,
+									integrates exclusively...
+								</p>
+								<a href="/" class="inline-flex items-center underline">Read more</a>
+							</Card>
+							<div class="flex flex-col gap-6">
+								<Card img={latestnews2} horizontal>
+									<h5 class="mb-2 font-bold text-gray-900 dark:text-white">
+										Class Technologies Inc. Closes $30 Million Series A Financing to Meet High Demand
+									</h5>
+									<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
+										Class Technologies Inc., the company that created Class,...
+									</p>
+								</Card>
+								<Card img={latestnews3} horizontal>
+									<h5 class="mb-2 font-bold text-gray-900 dark:text-white">
+										Zoom’s earliest investors are betting millions on a better Zoom for schools
+									</h5>
+									<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
+										Zoom was never created to be a consumer product. Nonetheless, the...
+									</p>
+								</Card>
+								<Card img={latestnews4} horizontal>
+									<h5 class="mb-2 font-bold text-gray-900 dark:text-white">
+										Former Blackboard CEO Raises $16M to Bring LMS Features to Zoom Classrooms
+									</h5>
+									<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
+										This year, investors have reaped big financial returns from betting on Zoom...
+									</p>
+								</Card>
+							</div>
+						</div>
+					</div>
 				</Card>
 			</div>
 		</div>

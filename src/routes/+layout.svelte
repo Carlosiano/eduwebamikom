@@ -7,3 +7,12 @@
 <Analytics />
 
 <slot />
+
+<style>
+	:global(html.dark .logo:last-child) {
+		fill: #2a5866;
+	}
+	:global(html .logo:last-child) {
+		fill: #113c49;
+	}
+</style>
