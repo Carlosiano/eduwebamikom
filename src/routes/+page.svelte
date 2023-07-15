@@ -28,6 +28,7 @@
 	import latestnews2 from '$lib/assets/latestnews2.png';
 	import latestnews3 from '$lib/assets/latestnews3.png';
 	import latestnews4 from '$lib/assets/latestnews4.png';
+	import mainbackgroundimg from '$lib/assets/mainbackgroundimg.png';
 
 	import {
 		Alert,
@@ -65,9 +66,9 @@
 	<Navbar />
 	<div class="flex container justify-center">
 		<div class="flex flex-col">
-			<div class="flex">
+			<div class="flex h-[550px] bg-local bg-no-repeat bg-right-top bg-contain" style="background-image: url({mainbackgroundimg});">
 				<div class="flex m-auto gap-4 flex-col sm:flex-row items-center">
-					<Card padding="sm" class="h-fit border-none shadow-none">
+					<Card padding="sm" class="h-fit border-none shadow-none backdrop-blur-sm bg-white/30 dark:bg-gray-800/30">
 						<div class="flex flex-col items-center pb-4">
 							<h5 class="mb-1 text-5xl font-medium text-gray-900 dark:text-white">
 								"Master the web from Anywhere, Anytime"
@@ -85,7 +86,7 @@
 						</div>
 					</Card>
 					<div class="flex flex-col gap-3 md:w-96 lg:w-[600px] lg:h-80 lg:flex-row items-center">
-						<Card class="h-fit w-fit md:self-start lg:self-end">
+						<Card class="h-fit w-fit md:self-start lg:self-end backdrop-blur-sm bg-white/30 dark:bg-gray-800/30">
 							<div class="flex flex-col gap-3">
 								<div class="flex items-center space-x-4">
 									<Avatar src="" alt="avatar" class="flex-shrink-0" />
@@ -101,7 +102,7 @@
 								<Button class="w-fit" color="red">Join Now</Button>
 							</div>
 						</Card>
-						<Card class="h-fit md:self-end lg:self-center">
+						<Card class="h-fit md:self-end lg:self-center backdrop-blur-sm bg-white/30 dark:bg-gray-800/30">
 							<a class="flex flex-row" href="/">
 								<svg
 									width="50px"
