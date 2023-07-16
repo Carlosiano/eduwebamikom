@@ -29,6 +29,9 @@
 	import latestnews3 from '$lib/assets/latestnews3.png';
 	import latestnews4 from '$lib/assets/latestnews4.png';
 	import mainbackgroundimg from '$lib/assets/mainbackgroundimg.png';
+	import userexperience from '$lib/assets/userexperience.png';
+	import congratcentang from '$lib/assets/congratcentang.svg';
+	import congratmail from '$lib/assets/congratmail.svg';
 
 	import {
 		Alert,
@@ -66,14 +69,20 @@
 	<Navbar />
 	<div class="flex container justify-center">
 		<div class="flex flex-col">
-			<div class="flex h-[550px] bg-local bg-no-repeat bg-right-top bg-contain" style="background-image: url({mainbackgroundimg});">
+			<div
+				class="flex h-[550px] bg-local bg-no-repeat bg-right-top bg-contain"
+				style="background-image: url({mainbackgroundimg});"
+			>
 				<div class="flex m-auto gap-4 flex-col sm:flex-row items-center">
-					<Card padding="sm" class="h-fit border-none shadow-none backdrop-blur-sm bg-white/30 dark:bg-gray-800/30">
+					<Card
+						padding="sm"
+						class="h-fit border-none shadow-none backdrop-blur-sm bg-white/30 dark:bg-gray-800/30"
+					>
 						<div class="flex flex-col items-center pb-4">
 							<h5 class="mb-1 text-5xl font-medium text-gray-900 dark:text-white">
 								"Master the web from Anywhere, Anytime"
 							</h5>
-							<span class="text-sm text-gray-500 dark:text-gray-400"
+							<span class="w-fit px-1 rounded-sm bg-white dark:bg-gray-800 lg:dark:bg-transparent lg:bg-transparent text-sm text-gray-500 dark:text-gray-400"
 								>Pelajari pengembangan web dengan cara yang inovatif dan interaktif melalui EduWeb,
 								platform e-learning sejati.
 							</span>
@@ -86,15 +95,17 @@
 						</div>
 					</Card>
 					<div class="flex flex-col gap-3 md:w-96 lg:w-[600px] lg:h-80 lg:flex-row items-center">
-						<Card class="h-fit w-fit md:self-start lg:self-end backdrop-blur-sm bg-white/30 dark:bg-gray-800/30">
+						<Card
+							class="h-fit w-fit md:self-start lg:self-end backdrop-blur-sm bg-white/30 dark:bg-gray-800/30"
+						>
 							<div class="flex flex-col gap-3">
 								<div class="flex items-center space-x-4">
-									<Avatar src="" alt="avatar" class="flex-shrink-0" />
+									<img src={userexperience} alt="avatar" class="w-10" />
 									<div class="flex-1 min-w-0">
 										<p class="text-sm font-medium text-gray-900 truncate dark:text-white">
 											User Experience Class
 										</p>
-										<p class="text-sm text-gray-500 truncate dark:text-gray-400">
+										<p class="w-fit px-1 rounded-sm bg-white dark:bg-gray-800 text-sm text-gray-500 truncate dark:text-gray-400">
 											Today at 12.00 PM
 										</p>
 									</div>
@@ -102,34 +113,23 @@
 								<Button class="w-fit" color="red">Join Now</Button>
 							</div>
 						</Card>
-						<Card class="h-fit md:self-end lg:self-center backdrop-blur-sm bg-white/30 dark:bg-gray-800/30">
-							<a class="flex flex-row" href="/">
-								<svg
-									width="50px"
-									height="50px"
-									viewBox="0 0 512 512"
-									xmlns="http://www.w3.org/2000/svg"
-									><g fill="none" fill-rule="evenodd"
-										><path fill="#ffda3e" d="M56 402.667h400V109.333H56z" /><path
-											fill="#fc0"
-											d="M256 182.667l-200 220h400z"
-										/><path
-											d="M456 109.333L276.848 284.116c-11.675 11.4-30.02 11.4-41.696 0L56 109.333h400z"
-											fill="#f33"
-										/></g
-									></svg
-								>
-								<div>
-									<h5
-										class="mb-2 text-sm font-semibold tracking-tight text-gray-900 dark:text-white"
-									>
+						<Card padding="none"
+							class="flex p-3 h-fit md:self-end lg:self-center backdrop-blur-sm bg-white/30 dark:bg-gray-800/30"
+						>
+						<div class="flex flex-row justify-center items-center">
+							<img src={congratmail} alt="Congratulation Mail" class="w-10 mr-2" />
+							<div>
+								<div class="flex justify-between items-center">
+									<h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">
 										Congratulation
 									</h5>
-									<p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
-										Your admission completed
-									</p>
+									<img src={congratcentang} alt="congratulation centang" class="w-4"/>
 								</div>
-							</a>
+								<p class="w-fit px-1 rounded-sm sm:bg-white sm:dark:bg-gray-800 lg:bg-transparent font-normal text-gray-500 dark:text-gray-400">
+									Your admission completed
+								</p>
+							</div>
+						</div>
 						</Card>
 					</div>
 				</div>
@@ -342,7 +342,7 @@
 					class="sm:gap-4 shadow-none border-none flex flex-col sm:items-start sm:flex-row"
 				>
 					<img src={cloudstorage} alt="" class="sm:w-1/3" />
-					<div class="sm:mt-6">
+					<div class="flex flex-col sm:mt-6">
 						<p>-------- INTEGRATIONS</p>
 						<h5
 							class="mb-2 text-2xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white"
@@ -354,14 +354,14 @@
 							200+ tools, student information systems (SIS), and education platforms.
 						</p>
 						<br />
-						<Button>See All Integrations</Button>
+						<Button class="w-fit self-start sm:self-center">See All Integrations</Button>
 					</div>
 				</Card>
 				<Card
 					size="xl"
 					class="gap-6 shadow-none border-none flex flex-col sm:items-start sm:flex-row"
 				>
-					<div class="sm:mt-6">
+					<div class="sm:mt-6 flex flex-col">
 						<div class="flex flex-col items-end sm:block">
 							<p
 								class="before:content-[''] after:content-['--------'] sm:before:content-['--------'] sm:after:content-['']"
@@ -380,7 +380,7 @@
 						<br />
 						<p>Are you too? Please give your assessment</p>
 						<br />
-						<Button>Write your assessment</Button>
+						<Button class="w-fit self-end sm:self-center">Write your assessment</Button>
 					</div>
 					<Card padding="md">
 						<div
@@ -432,7 +432,8 @@
 							<div class="flex flex-col gap-6">
 								<Card img={latestnews2} horizontal>
 									<h5 class="mb-2 font-bold text-gray-900 dark:text-white">
-										Class Technologies Inc. Closes $30 Million Series A Financing to Meet High Demand
+										Class Technologies Inc. Closes $30 Million Series A Financing to Meet High
+										Demand
 									</h5>
 									<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
 										Class Technologies Inc., the company that created Class,...

@@ -15,7 +15,6 @@
 		DarkMode
 	} from 'flowbite-svelte';
 
-	import logo from '$lib/assets/logo.svg';
 </script>
 
 <Navbar let:hidden let:toggle>
